@@ -1,0 +1,153 @@
+/* 
+    Document   : stsheet
+    Created on : Oct 17, 2020, 5:14:53 PM
+    Author     : mm
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+body { 
+    background-image: url(images/bg-intro-desktop.png);
+    background-color: hsl(0, 100%, 74%);
+    color:white;
+    font-family: 'Poppins', sans-serif;
+    background-size: 99%;
+    font-size: 14px;
+}
+.left {
+    float: left;
+    width: 40% ;
+    padding-top: 17%;
+    padding-left: 10%;
+    
+}
+.left h1 {
+    font-weight:  700;
+    font-size: 45px;
+    line-height: 1.2em;
+
+}
+.left p {
+        font-size: 14px;
+}
+.right {
+        width: 50%;
+        float: right;
+        
+}
+.right .head-form {
+    background-color: hsl(246deg 32% 55%);
+    width: 80%;
+    margin-top: 16%;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow:0px 5px  hsl(0deg 65% 67%);
+    text-align: center;
+    padding-top: 2px;
+    font-weight: 600;
+}
+.right .head-form #cc {
+    font-size: 12px;
+    font-weight: 100;
+}
+.right .sform {
+   margin-top: 20px;
+   width: 80%;
+   background-color: white;
+    border-radius: 10px;
+    box-shadow:0px 8px  hsl(0deg 65% 67%);
+    padding-top: 20px;
+    position: relative;
+}
+.right .sform input {
+    width: 85%;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin-left: 30px;
+    margin-top: 20px;
+    padding-left: 20px;
+    border-radius: 5px 5px;
+    font-weight: 600;
+    outline: none;
+    box-sizing: border-box;
+}
+
+ ::placeholder {
+    font-weight: 600;
+    
+}
+.right .sform input:focus {
+    border: 2px solid #ccc;}
+.right .sform #sub {
+    background-color: hsl(154, 59%, 51%);
+    padding-left: 12px;
+    margin-left: 30px;
+    margin-top: 20px;
+    color: white;
+    font-size: 14px;
+    height: 50px;
+    width: 86%;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    outline-color: hsl(154, 59%, 51%);
+    box-sizing: border-box;
+    border-radius: 10px 10px;
+}
+    .right .sform #sub:hover {
+        opacity: .8;
+    }
+     .right .pterm {
+         
+       color: hsl(0deg 0% 73%);
+    padding-left: 55px;
+    padding-bottom: 50px;
+    font-size: 12px;
+    margin-top: 15px;
+        
+    }
+     .right .redcont  {
+         font-weight: 800;
+        color:  hsl(0, 100%, 74%);
+        text-decoration: none;
+        
+        
+    }
+    .right .redcont:hover  {
+         opacity: .8;
+    }
+    .right .sform .emassage {
+        color: hsl(0, 100%, 74%);
+        float: right;
+        margin: 0px 55px 0px 0px;
+    }
+    .right .sform .eimage {
+        margin-left: -55px;
+        margin-top: 26px;
+        position: absolute;
+        visibility: hidden;
+        
+    }
+    @media(max-width:700px){
+        .left {
+    
+    width: 100% ;
+    padding-top: 10%;
+    padding-left: 10%;
+    float: none;
+        }
+        .right {
+        width: 100%;
+        float: none;
+       padding-left: 5%;
+       margin-top: 10%;
+        
+}
+.right .sform {
+   
+   width: 90%;}
+.right .head-form {
+    width: 90%;
+    height: 70px;}
+
+    }

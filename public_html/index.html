@@ -1,0 +1,96 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>intro-component-with-sign-up-form-master</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="images/favicon-32x32.png" rel="icon">
+        <link rel="stylesheet" href="stsheet.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="left">
+            <h1>learn to code by <br>watching others</h1>
+            <p>see how experienced developers solve problems in real-time.<br>
+            watching scripted tutorials is great.but understanding how.
+            <br>developer think is invaluable.</p>
+        </div>
+        <div class="right">
+            <div class="head-form">
+                <p>Try it free 7 days <i id="cc">then $20/mo. thereafter</i>  </p>
+            </div>
+            <form class="sform" id="myForm">
+                <input type="text" name="First Name" id="fname" placeholder="First Name" >
+                <img class="eimage" src="images/icon-error.svg" alt="">
+                <p class="emassage"></p>
+                
+                <input type="text" name="last Name" id="lname" placeholder="Last Name" >
+                <img class="eimage" src="images/icon-error.svg" alt="">
+                <p class="emassage"></p>
+                
+                <input type="text" name="mail" id="mail" placeholder="Email Adress" >
+                <img class="eimage" src="images/icon-error.svg" alt="">
+                <p class="emassage"></p>
+                
+                <input type="password" name="Password" id="pass" placeholder="Password" >
+                <img class="eimage" src="images/icon-error.svg" alt="">
+                <p class="emassage"></p>
+                <button id="sub" type="button" onclick="validation()" >CLAIM YOUR FREE TRAIL</button>
+                <div class="pterm">by clicking the button you agreeing to our <a href="" class="redcont">
+                        terms and service</a></div>     
+            </form>            
+        </div>
+        <script>
+            
+            function validation(){
+               var input =document.querySelectorAll('.sform input');
+               var eimage = document.querySelectorAll('.sform .eimage');
+               var emassage = document.querySelectorAll('.sform .emassage');
+                 var pat=/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+                var flag=0;
+                for(var i=0;i<4;i++){
+                    if(i == 2){
+                       if(input[2].value.match(pat)){
+                   eimage[2].style.visibility='hidden';
+                   emassage[2].innerHTML="";
+                   flag+=1;
+                }
+                else{
+                     emassage[2].innerHTML='looks like this is not an email';
+                     input[2].placeholder='email@example/com';                     
+                        eimage[2].style.visibility='visible';
+                        flag=0;
+                    }}
+                    else{
+                        if(input[i].value ==''){
+                        emassage[i].innerHTML=input[i].getAttribute('name') +' can\'t be empty';
+                        eimage[i].style.visibility='visible';
+                        flag=0;
+                             } 
+                         else{
+                        emassage[i].innerHTML='';
+                        eimage[i].style.visibility='hidden';
+                        flag+=1;
+                             } 
+                    }
+                    }
+                   if(flag==4){
+                       alert("thanks for registration");
+                       document.getElementById('myForm').reset();
+                   }
+                    
+                }
+                
+                
+                
+           
+            
+            
+            
+            </script>
+    </body>
+</html>
